@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on win32)" generated="20240116 16:02:02.021" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Formation\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Element Should Be Visible">
+<arg>id:combo_facility</arg>
+<msg timestamp="20240116 16:02:03.363" level="FAIL">No keyword with name 'Element Should Be Visible' found.</msg>
+<status status="FAIL" starttime="20240116 16:02:03.363" endtime="20240116 16:02:03.363"/>
+</kw>
+<kw name="Click Element">
+<arg>id:combo_facility</arg>
+<status status="NOT RUN" starttime="20240116 16:02:03.365" endtime="20240116 16:02:03.365"/>
+</kw>
+<kw name="Select From List By Index">
+<arg>id:combo_facility</arg>
+<arg>0</arg>
+<status status="NOT RUN" starttime="20240116 16:02:03.366" endtime="20240116 16:02:03.366"/>
+</kw>
+<kw name="Element Should Be Visible">
+<arg>id:chk_hospotal_readmission</arg>
+<status status="NOT RUN" starttime="20240116 16:02:03.368" endtime="20240116 16:02:03.368"/>
+</kw>
+<kw name="Select Checkbox">
+<arg>id:chk_hospotal_readmission</arg>
+<status status="NOT RUN" starttime="20240116 16:02:03.369" endtime="20240116 16:02:03.369"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240116 16:02:03.369" endtime="20240116 16:02:03.369"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" starttime="20240116 16:02:03.371" endtime="20240116 16:02:03.372"/>
+</kw>
+<status status="PASS" starttime="20240116 16:02:02.067" endtime="20240116 16:02:06.528"/>
+</kw>
+<status status="PASS" starttime="20240116 16:02:02.067" endtime="20240116 16:02:06.529"/>
+</test>
+<status status="PASS" starttime="20240116 16:02:02.024" endtime="20240116 16:02:06.531"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

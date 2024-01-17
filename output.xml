@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on win32)" generated="20240117 10:18:52.081" rpa="false" schemaversion="4">
+<suite id="s1" name="Secondrobot V1" source="c:\Users\Formation\Desktop\Workspace\secondrobot_v1.robot">
+<test id="s1-t1" name="Book appointment test with existing user" line="8">
+<kw name="Slow execution" library="FirstRobot" type="SETUP">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20240117 10:18:53.253" endtime="20240117 10:18:53.261"/>
+</kw>
+<status status="PASS" starttime="20240117 10:18:53.248" endtime="20240117 10:18:53.261"/>
+</kw>
+<kw name="Open browser to Login Page" library="FirstRobot">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240117 10:18:53.274" level="INFO">Opening browser 'firefox' to base url 'https://katalon-demo-cura.herokuapp.com'.</msg>
+<status status="PASS" starttime="20240117 10:18:53.269" endtime="20240117 10:19:01.467"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240117 10:19:01.469" endtime="20240117 10:19:01.763"/>
+</kw>
+<status status="PASS" starttime="20240117 10:18:53.266" endtime="20240117 10:19:01.766"/>
+</kw>
+<kw name="Login to Book Appointment" library="FirstRobot">
+<arg>John Doe</arg>
+<arg>ThisIsNotAPassword</arg>
+<arg>&amp;{JDD1}{facility}</arg>
+<arg>&amp;{JDD2}{program}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:btn-make-appointment</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:01.814" level="INFO">Clicking element 'id:btn-make-appointment'.</msg>
+<status status="PASS" starttime="20240117 10:19:01.790" endtime="20240117 10:19:02.183"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:02.194" level="INFO">Typing text 'John Doe' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20240117 10:19:02.187" endtime="20240117 10:19:02.286"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:02.292" level="INFO">Typing text 'ThisIsNotAPassword' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20240117 10:19:02.288" endtime="20240117 10:19:02.364"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:02.372" level="INFO">Clicking button 'id:btn-login'.</msg>
+<status status="PASS" starttime="20240117 10:19:02.366" endtime="20240117 10:19:02.798"/>
+</kw>
+<status status="PASS" starttime="20240117 10:19:01.773" endtime="20240117 10:19:02.800"/>
+</kw>
+<kw name="Book Appointment" library="FirstRobot">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:combo_facility</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240117 10:19:02.864" level="INFO">Element 'id:combo_facility' is displayed.</msg>
+<status status="PASS" starttime="20240117 10:19:02.810" endtime="20240117 10:19:02.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:combo_facility</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:02.877" level="INFO">Clicking element 'id:combo_facility'.</msg>
+<status status="PASS" starttime="20240117 10:19:02.868" endtime="20240117 10:19:03.177"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>id:combo_facility</arg>
+<arg>${facility}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20240117 10:19:03.199" level="INFO">Selecting options from selection list 'id:combo_facility' by value Hongkong CURA Healthcare Center.</msg>
+<status status="PASS" starttime="20240117 10:19:03.181" endtime="20240117 10:19:03.581"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:chk_hospotal_readmission</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240117 10:19:03.650" level="INFO">Element 'id:chk_hospotal_readmission' is displayed.</msg>
+<status status="PASS" starttime="20240117 10:19:03.585" endtime="20240117 10:19:03.653"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>id:chk_hospotal_readmission</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:03.662" level="INFO">Selecting checkbox 'id:chk_hospotal_readmission'.</msg>
+<status status="PASS" starttime="20240117 10:19:03.656" endtime="20240117 10:19:03.927"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>programs</arg>
+<arg>${program}</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20240117 10:19:03.935" level="INFO">Selecting 'Medicaid' from radio button 'programs'.</msg>
+<status status="PASS" starttime="20240117 10:19:03.929" endtime="20240117 10:19:04.176"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt_visit_date</arg>
+<arg>${visitDate}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:04.195" level="INFO">Typing text '02/07/2022' into text field 'id:txt_visit_date'.</msg>
+<status status="PASS" starttime="20240117 10:19:04.180" endtime="20240117 10:19:04.319"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:txt_comment</arg>
+<arg>${comment}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:04.327" level="INFO">Typing text 'un commentaire' into text field 'id:txt_comment'.</msg>
+<status status="PASS" starttime="20240117 10:19:04.322" endtime="20240117 10:19:04.386"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:btn-book-appointment</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240117 10:19:04.394" level="INFO">Clicking button 'id:btn-book-appointment'.</msg>
+<status status="PASS" starttime="20240117 10:19:04.389" endtime="20240117 10:19:05.164"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:facility</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240117 10:19:05.225" level="INFO">Element 'id:facility' is displayed.</msg>
+<status status="PASS" starttime="20240117 10:19:05.166" endtime="20240117 10:19:05.226"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:hospital_readmission</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240117 10:19:05.268" level="INFO">Element 'id:hospital_readmission' is displayed.</msg>
+<status status="PASS" starttime="20240117 10:19:05.228" endtime="20240117 10:19:05.271"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:program</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240117 10:19:05.311" level="INFO">Element 'id:program' is displayed.</msg>
+<status status="PASS" starttime="20240117 10:19:05.273" endtime="20240117 10:19:05.312"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:visit_date</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240117 10:19:05.388" level="INFO">Element 'id:visit_date' is displayed.</msg>
+<status status="PASS" starttime="20240117 10:19:05.314" endtime="20240117 10:19:05.390"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id:comment</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20240117 10:19:05.434" level="INFO">Element 'id:comment' is displayed.</msg>
+<status status="PASS" starttime="20240117 10:19:05.393" endtime="20240117 10:19:05.437"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id:facility</arg>
+<arg>${facility}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240117 10:19:05.447" level="INFO">Verifying element 'id:facility' contains exact text 'Hongkong CURA Healthcare Center'.</msg>
+<status status="PASS" starttime="20240117 10:19:05.440" endtime="20240117 10:19:05.473"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id:hospital_readmission</arg>
+<arg>${readmissionExpected}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240117 10:19:05.482" level="INFO">Verifying element 'id:hospital_readmission' contains exact text 'Yes'.</msg>
+<status status="PASS" starttime="20240117 10:19:05.475" endtime="20240117 10:19:05.510"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id:program</arg>
+<arg>${program}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240117 10:19:05.526" level="INFO">Verifying element 'id:program' contains exact text 'Medicaid'.</msg>
+<status status="PASS" starttime="20240117 10:19:05.513" endtime="20240117 10:19:05.552"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id:visit_date</arg>
+<arg>${visitDate}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240117 10:19:05.565" level="INFO">Verifying element 'id:visit_date' contains exact text '02/07/2022'.</msg>
+<status status="PASS" starttime="20240117 10:19:05.556" endtime="20240117 10:19:05.589"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>id:comment</arg>
+<arg>${comment}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20240117 10:19:05.602" level="INFO">Verifying element 'id:comment' contains exact text 'un commentaire'.</msg>
+<status status="PASS" starttime="20240117 10:19:05.592" endtime="20240117 10:19:05.624"/>
+</kw>
+<status status="PASS" starttime="20240117 10:19:02.806" endtime="20240117 10:19:05.626"/>
+</kw>
+<kw name="End of Test and Close browser" library="FirstRobot" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 10:19:10.650" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240117 10:19:05.635" endtime="20240117 10:19:10.654"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240117 10:19:10.660" endtime="20240117 10:19:13.943"/>
+</kw>
+<status status="PASS" starttime="20240117 10:19:05.631" endtime="20240117 10:19:13.950"/>
+</kw>
+<status status="PASS" starttime="20240117 10:18:53.237" endtime="20240117 10:19:13.958"/>
+</test>
+<doc>Ceci est un second cas de test automatisé.</doc>
+<status status="PASS" starttime="20240117 10:18:52.117" endtime="20240117 10:19:13.975"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Secondrobot V1">Secondrobot V1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
