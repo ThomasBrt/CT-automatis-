@@ -1,25 +1,9 @@
 *** Settings ***
 Documentation       Ceci est un cas de test automatisé.
+Resource    FirstRobot.resource
 Library    SeleniumLibrary
 Test Setup    Slow execution
 Test Teardown    End of Test and Close browser
-
-*** Variables ***
-${url}    https://katalon-demo-cura.herokuapp.com
-${browser}    firefox
-${facility}    Hongkong CURA Healthcare Center
-${readmission}    true
-${program}    Medicaid
-${visitDate}    02/07/2022
-${comment}    un commentaire
-
-#Variable de vérification de l'attendu
-${readmissionExpected}    Yes
-
-#JDD
-&{JDD1}    facility=Tokyo CURA Healthcare Center    program=Medicare
-&{JDD2}    facility=Hongkong CURA Healthcare Center    program=Medicaid
-&{JDD3}    facility=Seoul CURA Healthcare Center    program=none
 
 *** Keywords ***
 Slow execution

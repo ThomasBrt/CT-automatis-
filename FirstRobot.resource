@@ -3,6 +3,10 @@ Documentation       Ceci est un cas de test automatisé.
 Library    SeleniumLibrary
 
 *** Variables ***
+#Elements HTML
+&{form_locators}    facilityField=id:combo_facility
+
+#JDD par défaut
 ${url}    https://katalon-demo-cura.herokuapp.com
 ${browser}    firefox
 ${facility}    Hongkong CURA Healthcare Center
@@ -37,11 +41,11 @@ Login to Book Appointment
     Input Text    name:username    ${login}
     Input Text    name:password    ${password}
     #Bouton Se connecter
-    Click Button  id:btn-login  #xpath=//button[@id="btn-login"]
+    Click Button  id:btn-login  #ou xpath=//button[@id="btn-login"]
 Book Appointment
     #### Formulaire appointment ####
     #Sélectionner une facility
-    Element Should Be Visible    id:combo_facility
+    Element Should Be Visible    ${form_locators}[facilityField]
     Click Element    id:combo_facility
     Select From List By Value    id:combo_facility    ${facility}
     #Cocher Apply readmission et un programme
